@@ -1,7 +1,8 @@
-sudo: false
 language: python
 python: "3.6"
 node_js: "7"
+before_install:
+  - sudo apt-get install graphviz
 install:
   - pip install -r requirements.txt
   - npm install gitbook-cli -g
@@ -9,14 +10,22 @@ install:
   - npm install safe-buffer
   - cd ..
   - gitbook install docs
-script: 
-  - pytest
-  - gitbook build docs
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  local-dir: docs/_book
-  on:
-    branch: master
+jobs:
+  include:
+    - stage: test
+      script: pytest
+    - stage: build_docs
+      script: gitbook build docs
+    - stage: publish_docs
+      script: skip
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        local-dir: docs/_book
+stages:
+  - test
+  - build_docs
+  - name: publish_docs
+    if: branch = master
