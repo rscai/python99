@@ -1,0 +1,19 @@
+{
+  "gitbook": "3.x.x",
+  "plugins": [
+    "include-codeblock",
+    "ace",
+    "uml"
+  ],
+  "pluginsConfig": {
+    "uml": {
+      "format": "png",
+      "nailgun": false
+    },
+    "include-codeblock": {
+      "template": "ace",
+      "unindent": true,
+      "theme": "monokai"
+    }
+  }
+}
