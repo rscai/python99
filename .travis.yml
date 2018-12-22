@@ -5,6 +5,7 @@ node_js: "7"
 install:
   - pip install -r requirements.txt
   - npm install gitbook-cli -g
+  - npm install safe-buffer -g
   - gitbook install docs
 script: 
   - pytest
