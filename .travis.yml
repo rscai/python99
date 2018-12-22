@@ -16,8 +16,6 @@ jobs:
       script: pytest
     - stage: build_docs
       script: gitbook build docs
-    - stage: publish_docs
-      script: skip
       deploy:
         provider: pages
         skip-cleanup: true
@@ -27,5 +25,4 @@ jobs:
 stages:
   - test
   - build_docs
-  - name: publish_docs
     if: branch = master
