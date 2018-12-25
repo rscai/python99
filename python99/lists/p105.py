@@ -1,11 +1,11 @@
 ## Reverse a list
 
-def reverse_inplace(list):
+def reverse(list):
     if list is None:
         return []
     return list.reverse()
 
-def reverse_immutable(list):
-    if list is None:
-        return []
-    return [list[i] for i in range(len(list)-1,-1,-1)]
+def reverse_recursively(l):
+    if l == []:
+        return l
+    return reverse_recursively(l[1:]) + [l[0]]

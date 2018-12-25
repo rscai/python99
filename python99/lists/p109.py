@@ -1,6 +1,7 @@
 # Pack consecutive duplicates of list elements into sublists.
 # If a list contains repreated elements they should be placed in separate sublists
 
+
 def pack(l):
     if l is None:
         return []

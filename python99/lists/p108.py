@@ -2,6 +2,7 @@
 # If a list contains repeated elements they should be replaced with a single copy of the elements.
 # The order of the elements should not be changed.
 
+
 def compress(l):
     if l is None:
         return []

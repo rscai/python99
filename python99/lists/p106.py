@@ -1,6 +1,7 @@
 ## Find out whether a list is a palindrome.
 ## A palindrome can be read forward or backward
 
+
 def is_palindrome(list):
     if list is None:
         return False

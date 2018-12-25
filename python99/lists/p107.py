@@ -1,5 +1,6 @@
 ## Flatten a nested list structure
 
+
 def flatten(l):
     if l is None:
         return []
@@ -7,7 +8,7 @@ def flatten(l):
         return []
     element = l[0]
     remain = l[1:len(l)]
-    if isinstance(element,list):
+    if isinstance(element, list):
         return flatten(element)+flatten(remain)
     else:
         return [element]+flatten(remain)
