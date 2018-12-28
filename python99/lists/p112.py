@@ -4,15 +4,17 @@
 
 from python99.lists.p107 import flatten
 
+
 def decode(l):
     if l is None:
         return []
     if len(l) == 0:
         return []
-    return flatten([ decode_term(term) for term in l])
+    return decode_term(l[0]) + decode(l[1:])
+
 
 def decode_term(term):
     if isinstance(term, list):
-        return [ term[1] for e in range(0,term[0])]
+        return [term[1] for e in range(0, term[0])]
     else:
-        return term
+        return [term]

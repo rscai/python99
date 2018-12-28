@@ -5,6 +5,7 @@
 
 from python99.lists.p109 import pack
 
+
 def encode(l):
     packed_list = pack(l)
-    return [[len(group),group[0]] for group in packed_list]
+    return [[len(group), group[0]] for group in packed_list]

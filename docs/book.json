@@ -3,7 +3,9 @@
   "plugins": [
     "include-codeblock",
     "ace",
-    "uml"
+    "uml",
+    "mathjax",
+    "collapsible-menu-ex"
   ],
   "pluginsConfig": {
     "uml": {

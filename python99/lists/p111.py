@@ -5,8 +5,10 @@
 
 from python99.lists.p110 import encode
 
+
 def encode_modified(l):
-    return [ simplify(e) for e in encode(l)]
+    return [simplify(e) for e in encode(l)]
+
 
 def simplify(term):
     if term[0] == 1:

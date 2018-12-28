@@ -4,26 +4,26 @@
 # as in problem 1.09, but only count them. As in problem 1.11,
 # simplify the result list by replacing the singleton terms [1,X] by X.
 
+
 def encode_direct(l):
+    return [simplify(term) for term in encode_internal(l)]
+
+
+def encode_internal(l):
     if len(l) == 0:
         return []
-    if len(l) == 1:
-        return l
     element = l[0]
     remain = l[1:len(l)]
-    encoded_remain = encode_direct(remain)
+    encoded_remain = encode_internal(remain)
     if len(encoded_remain) == 0:
-        return [element]
-    if isinstance(encoded_remain[0], list):
-        if encoded_remain[0][1] == element:
-            encoded_remain[0][0]+=1
-            return encoded_remain
-        else:
-            return [element] + encoded_remain
-    else:
-        if encoded_remain[0] == element:
-            encoded_remain[0] = [2,element]
-            return encoded_remain
-        else:
-            return [element] + encoded_remain
-    
+        return [[1, element]]
+    if encoded_remain[0][1] == element:
+        encoded_remain[0][0] += 1
+        return encoded_remain
+    return [[1, element]] + encoded_remain
+
+
+def simplify(term):
+    if term[0] == 1:
+        return term[1]
+    return term
