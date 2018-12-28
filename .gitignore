@@ -117,7 +117,7 @@ dmypy.json
 
 ## Gitbook
 
-docs/node_modules/
+/docs/node_modules/
 /docs/_book/
 /docs/assets/
 

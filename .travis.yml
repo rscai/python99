@@ -5,6 +5,7 @@ before_install:
   - sudo apt-get install graphviz
 install:
   - pip install -r requirements.txt
+  - pip install hanziconv
   - npm install gitbook-cli -g
   - cd docs
   - npm install safe-buffer
@@ -15,7 +16,10 @@ jobs:
     - stage: test
       script: pytest
     - stage: build_docs
-      script: gitbook build docs
+      script: 
+        - cp -r docs/zh_TR/* docs/zh_CN/
+        - python scripts/generate-zh_CN.py -o docs/zh_CN -s docs/zh_TR
+        - gitbook build docs
       deploy:
         provider: pages
         skip-cleanup: true
