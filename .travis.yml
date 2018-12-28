@@ -16,10 +16,7 @@ jobs:
     - stage: test
       script: pytest
     - stage: build_docs
-      script: 
-        - cp -r docs/zh_TR/* docs/zh_CN/
-        - python scripts/generate-zh_CN.py -o docs/zh_CN -s docs/zh_TR
-        - gitbook build docs
+      script:  cp -r docs/zh_TR/* docs/zh_CN/ && python scripts/generate-zh_CN.py -o docs/zh_CN -s docs/zh_TR && gitbook build docs
       deploy:
         provider: pages
         skip-cleanup: true
