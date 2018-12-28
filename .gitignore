@@ -123,6 +123,6 @@ dmypy.json
 
 ## ignore generated content under zh_CN, except README.md and SUMMARY.md
 
-/docs/zh_CN/
+/docs/zh_CN/*
 !/docs/zh_CN/README.md
 !/docs/zh_CN/SUMMARY.md
