@@ -115,11 +115,14 @@ dmypy.json
 .pyre/
 .vscode/
 
-## NodeJS
-
-node_modules/
-
 ## Gitbook
 
-_book/
-assets/
+docs/node_modules/
+/docs/_book/
+/docs/assets/
+
+## ignore generated content under zh_CN, except README.md and SUMMARY.md
+
+/docs/zh_CN/
+!/docs/zh_CN/README.md
+!/docs/zh_CN/SUMMARY.md
