@@ -6,7 +6,7 @@
     "uml",
     "mathjax",
     "collapsible-menu-ex",
-    "analytics"
+    "ga"
   ],
   "pluginsConfig": {
     "uml": {
@@ -18,8 +18,8 @@
       "unindent": true,
       "theme": "monokai"
     },
-    "analytics": {
-      "google": "UA-131534053-1"
+    "ga": {
+          "token": "UA-131534053-1"
     }
   }
 }
