@@ -4,7 +4,7 @@
     "include-codeblock",
     "ace",
     "uml",
-    "mathjax@https://github.com/OrgVue/gitbook-plugin-mathjax.git#speech-fix",
+    "mathjax",
     "collapsible-menu-ex",
     "ga"
   ],
@@ -17,9 +17,6 @@
       "template": "ace",
       "unindent": true,
       "theme": "monokai"
-    },
-    "mathjax": {
-      "forceSVG": true
     },
     "ga": {
           "token": "UA-131534053-1"
