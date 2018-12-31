@@ -5,7 +5,8 @@
     "ace",
     "uml",
     "mathjax",
-    "collapsible-menu-ex"
+    "collapsible-menu-ex",
+    "analytics"
   ],
   "pluginsConfig": {
     "uml": {
@@ -16,6 +17,9 @@
       "template": "ace",
       "unindent": true,
       "theme": "monokai"
+    },
+    "analytics": {
+      "google": "UA-131534053-1"
     }
   }
 }
