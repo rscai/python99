@@ -1,8 +1,7 @@
 # Summary
 
-* [介紹（還沒寫）](README.md)
-* [開發環境設置（還沒寫）](development-environment-setup.md)
-* [Python基礎（還沒寫）](python-basic.md)
+* [介紹](README.md)
+* [中英文術語對照表](terminology.md)
 * [Lists](lists.md)
   * [P101](lists/p101.md)
   * [P102](lists/p102.md)

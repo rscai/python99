@@ -1,4 +1,20 @@
-# Python Basic
+# Python基礎
+
+## 概要
+
+TBD
+
+## 解釋型語言
+
+TBD
+
+## 編程範式
+
+TBD
+
+## 動態類型
+
+
 
 ```uml
 @startuml
