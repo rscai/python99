@@ -12,3 +12,5 @@ def test_lotto():
     assert functools.reduce(
         operator.and_, [e in l for e in actual], True) == True
     assert len(actual) == len(set(actual))
+    assert functools.reduce(
+        operator.and_, [e in l for e in actual], True) == True
