@@ -4,7 +4,7 @@
     "include-codeblock",
     "ace",
     "uml",
-    "mathjax",
+    "mathjax-update-cdn",
     "collapsible-menu-ex",
     "ga"
   ],
