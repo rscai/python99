@@ -1,0 +1,1648 @@
+
+<!DOCTYPE HTML>
+<html lang="zh_CN" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>P305 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../btree.html" />
+    
+    
+    <link rel="prev" href="p304.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../terminology.html">
+            
+                <a href="../terminology.html">
+            
+                    
+                    中英文术语对照表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../lists.html">
+            
+                <a href="../lists.html">
+            
+                    
+                    Lists
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../lists/p101.html">
+            
+                <a href="../lists/p101.html">
+            
+                    
+                    P101
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../lists/p102.html">
+            
+                <a href="../lists/p102.html">
+            
+                    
+                    P102
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../lists/p103.html">
+            
+                <a href="../lists/p103.html">
+            
+                    
+                    P103
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../lists/p104.html">
+            
+                <a href="../lists/p104.html">
+            
+                    
+                    P104
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../lists/p105.html">
+            
+                <a href="../lists/p105.html">
+            
+                    
+                    P105
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../lists/p106.html">
+            
+                <a href="../lists/p106.html">
+            
+                    
+                    P106
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../lists/p107.html">
+            
+                <a href="../lists/p107.html">
+            
+                    
+                    P107
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../lists/p108.html">
+            
+                <a href="../lists/p108.html">
+            
+                    
+                    P108
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../lists/p109.html">
+            
+                <a href="../lists/p109.html">
+            
+                    
+                    P109
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../lists/p110.html">
+            
+                <a href="../lists/p110.html">
+            
+                    
+                    P110
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../lists/p111.html">
+            
+                <a href="../lists/p111.html">
+            
+                    
+                    P111
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../lists/p112.html">
+            
+                <a href="../lists/p112.html">
+            
+                    
+                    P112
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../lists/p113.html">
+            
+                <a href="../lists/p113.html">
+            
+                    
+                    P113
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../lists/p114.html">
+            
+                <a href="../lists/p114.html">
+            
+                    
+                    P114
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../lists/p115.html">
+            
+                <a href="../lists/p115.html">
+            
+                    
+                    P115
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../lists/p116.html">
+            
+                <a href="../lists/p116.html">
+            
+                    
+                    P116
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../lists/p117.html">
+            
+                <a href="../lists/p117.html">
+            
+                    
+                    P117
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../lists/p118.html">
+            
+                <a href="../lists/p118.html">
+            
+                    
+                    P118
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../lists/p119.html">
+            
+                <a href="../lists/p119.html">
+            
+                    
+                    P119
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../lists/p120.html">
+            
+                <a href="../lists/p120.html">
+            
+                    
+                    P120
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../lists/p121.html">
+            
+                <a href="../lists/p121.html">
+            
+                    
+                    P121
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../lists/p122.html">
+            
+                <a href="../lists/p122.html">
+            
+                    
+                    P122
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="../lists/p123.html">
+            
+                <a href="../lists/p123.html">
+            
+                    
+                    P123
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="../lists/p124.html">
+            
+                <a href="../lists/p124.html">
+            
+                    
+                    P124
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="../lists/p125.html">
+            
+                <a href="../lists/p125.html">
+            
+                    
+                    P125
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.26" data-path="../lists/p126.html">
+            
+                <a href="../lists/p126.html">
+            
+                    
+                    P126
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.27" data-path="../lists/p127.html">
+            
+                <a href="../lists/p127.html">
+            
+                    
+                    P127
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.28" data-path="../lists/p128.html">
+            
+                <a href="../lists/p128.html">
+            
+                    
+                    P128
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../arithmetic.html">
+            
+                <a href="../arithmetic.html">
+            
+                    
+                    Arithmetic
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../arithmetic/p201.html">
+            
+                <a href="../arithmetic/p201.html">
+            
+                    
+                    P201
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../arithmetic/p202.html">
+            
+                <a href="../arithmetic/p202.html">
+            
+                    
+                    P202
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../arithmetic/p203.html">
+            
+                <a href="../arithmetic/p203.html">
+            
+                    
+                    P203
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../arithmetic/p204.html">
+            
+                <a href="../arithmetic/p204.html">
+            
+                    
+                    P204
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../arithmetic/p205.html">
+            
+                <a href="../arithmetic/p205.html">
+            
+                    
+                    P205
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../arithmetic/p206.html">
+            
+                <a href="../arithmetic/p206.html">
+            
+                    
+                    P206
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../arithmetic/p207.html">
+            
+                <a href="../arithmetic/p207.html">
+            
+                    
+                    P207
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../arithmetic/p208.html">
+            
+                <a href="../arithmetic/p208.html">
+            
+                    
+                    P208
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../arithmetic/p209.html">
+            
+                <a href="../arithmetic/p209.html">
+            
+                    
+                    P209
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../arithmetic/p210.html">
+            
+                <a href="../arithmetic/p210.html">
+            
+                    
+                    P210
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../arithmetic/p211.html">
+            
+                <a href="../arithmetic/p211.html">
+            
+                    
+                    P211
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../logic_codes.html">
+            
+                <a href="../logic_codes.html">
+            
+                    
+                    Logic and Codes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="p301.html">
+            
+                <a href="p301.html">
+            
+                    
+                    P301
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="p302.html">
+            
+                <a href="p302.html">
+            
+                    
+                    P302
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="p303.html">
+            
+                <a href="p303.html">
+            
+                    
+                    P303
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="p304.html">
+            
+                <a href="p304.html">
+            
+                    
+                    P304
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="p305.html">
+            
+                <a href="p305.html">
+            
+                    
+                    P305
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../btree.html">
+            
+                <a href="../btree.html">
+            
+                    
+                    Binary Trees
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../btree/p401.html">
+            
+                <a href="../btree/p401.html">
+            
+                    
+                    P401
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../btree/p402.html">
+            
+                <a href="../btree/p402.html">
+            
+                    
+                    P402
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../btree/p403.html">
+            
+                <a href="../btree/p403.html">
+            
+                    
+                    P403
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../btree/p404.html">
+            
+                <a href="../btree/p404.html">
+            
+                    
+                    P404
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../btree/p405.html">
+            
+                <a href="../btree/p405.html">
+            
+                    
+                    P405
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../btree/p406.html">
+            
+                <a href="../btree/p406.html">
+            
+                    
+                    P406
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../btree/p407.html">
+            
+                <a href="../btree/p407.html">
+            
+                    
+                    P407
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../btree/p408.html">
+            
+                <a href="../btree/p408.html">
+            
+                    
+                    P408
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../btree/p409.html">
+            
+                <a href="../btree/p409.html">
+            
+                    
+                    P409
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../btree/p410.html">
+            
+                <a href="../btree/p410.html">
+            
+                    
+                    P410
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../btree/p411.html">
+            
+                <a href="../btree/p411.html">
+            
+                    
+                    P411
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../btree/p412.html">
+            
+                <a href="../btree/p412.html">
+            
+                    
+                    P412
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../btree/p413.html">
+            
+                <a href="../btree/p413.html">
+            
+                    
+                    P413
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../btree/p414.html">
+            
+                <a href="../btree/p414.html">
+            
+                    
+                    P414
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../btree/p415.html">
+            
+                <a href="../btree/p415.html">
+            
+                    
+                    P415
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../btree/p416.html">
+            
+                <a href="../btree/p416.html">
+            
+                    
+                    P416
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../btree/p417.html">
+            
+                <a href="../btree/p417.html">
+            
+                    
+                    P417
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../btree/p418.html">
+            
+                <a href="../btree/p418.html">
+            
+                    
+                    P418
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../mtree.html">
+            
+                <a href="../mtree.html">
+            
+                    
+                    Multiway Trees
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../mtree/p501.html">
+            
+                <a href="../mtree/p501.html">
+            
+                    
+                    P501
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../mtree/p502.html">
+            
+                <a href="../mtree/p502.html">
+            
+                    
+                    P502
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../mtree/p503.html">
+            
+                <a href="../mtree/p503.html">
+            
+                    
+                    P503
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../mtree/p504.html">
+            
+                <a href="../mtree/p504.html">
+            
+                    
+                    P504
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../mtree/p505.html">
+            
+                <a href="../mtree/p505.html">
+            
+                    
+                    P505
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../mtree/p506.html">
+            
+                <a href="../mtree/p506.html">
+            
+                    
+                    P506
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../graph.html">
+            
+                <a href="../graph.html">
+            
+                    
+                    Graphs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../graph/p601.html">
+            
+                <a href="../graph/p601.html">
+            
+                    
+                    P601
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../graph/p602.html">
+            
+                <a href="../graph/p602.html">
+            
+                    
+                    P602
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../graph/p603.html">
+            
+                <a href="../graph/p603.html">
+            
+                    
+                    P603
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../graph/p604.html">
+            
+                <a href="../graph/p604.html">
+            
+                    
+                    P604
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../graph/p605.html">
+            
+                <a href="../graph/p605.html">
+            
+                    
+                    P605
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../graph/p606.html">
+            
+                <a href="../graph/p606.html">
+            
+                    
+                    P606
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../graph/p607.html">
+            
+                <a href="../graph/p607.html">
+            
+                    
+                    P607
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../graph/p608.html">
+            
+                <a href="../graph/p608.html">
+            
+                    
+                    P608
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../graph/p609.html">
+            
+                <a href="../graph/p609.html">
+            
+                    
+                    P609
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../graph/p610.html">
+            
+                <a href="../graph/p610.html">
+            
+                    
+                    P610
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../graph/p611.html">
+            
+                <a href="../graph/p611.html">
+            
+                    
+                    P611
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../misc.html">
+            
+                <a href="../misc.html">
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../misc/p701.html">
+            
+                <a href="../misc/p701.html">
+            
+                    
+                    P701
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../misc/p702.html">
+            
+                <a href="../misc/p702.html">
+            
+                    
+                    P702
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../misc/p703.html">
+            
+                <a href="../misc/p703.html">
+            
+                    
+                    P703
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../misc/p704.html">
+            
+                <a href="../misc/p704.html">
+            
+                    
+                    P704
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../misc/p705.html">
+            
+                <a href="../misc/p705.html">
+            
+                    
+                    P705
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../misc/p706.html">
+            
+                <a href="../misc/p706.html">
+            
+                    
+                    P706
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../misc/p707.html">
+            
+                <a href="../misc/p707.html">
+            
+                    
+                    P707
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../misc/p708.html">
+            
+                <a href="../misc/p708.html">
+            
+                    
+                    P708
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../misc/p709.html">
+            
+                <a href="../misc/p709.html">
+            
+                    
+                    P709
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >P305</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="huffman-code">Huffman code.</h1>
+<blockquote>
+<p>First of all, consult a good book on discrete mathematics or algorithms for a detailed description of Huffman codes!</p>
+<p>We suppose a set of symbols with their frequencies, given as a list of fr(S,F) terms. Example: [fr(a,45),fr(b,13),fr(c,16),fr(e,9),fr(f,5)]. Our objective is to construct a list hc(S,C) terms, where C is the Huffman code word for the symbol S. In our example, the result could be Hs = [hc(a,&apos;0&apos;),hc(b,&apos;101&apos;),hc(c,&apos;100&apos;),hc(e,&apos;1101&apos;),hc(f,&apos;1100&apos;)][hc(a,&apos;10&apos;),...etc.]. The task shall be performed by the predicate huffman/2 defined as follows:</p>
+</blockquote>
+<pre><code class="lang-prolog"><span class="hljs-comment">% huffman(Fs,Hs) :- Hs is the Huffman code table for the frequency table Fs</span>
+</code></pre>
+<h2 id="huffman-code">Huffman code</h2>
+<p>Huffman coding uses a specific method for choosing the representation for each symbol, resulting in a prefix code (sometimes called &quot;prefix-free codes&quot;, that is, the bit string representing some particular symbol is never a prefix of the bit string representing any other symbol). Huffman coding is such a widespread method for creating prefix codes that the term &quot;Huffman code&quot; is widely used as a synonym for &quot;prefix code&quot; even when sich a code is not produced by Huffman&apos;s algorithm.</p>
+<h3 id="informal-description">Informal description</h3>
+<p><strong>Given</strong>
+  A set of symbols and their weights (usually proportional to probabilities).
+<strong>Find</strong>
+  A prefix-free binary code (a set of codewords) with minimum expected codeword length (equivalently, a tree with minimum weighted path length from the root).</p>
+<h3 id="formalized-description">Formalized description</h3>
+<p><strong>Input</strong>
+Alphabet <script type="math/tex; ">{\displaystyle A=(a_{1},a_{2},\cdots ,a_{n})}</script>, which is the symbol alphabet of size <script type="math/tex; ">{\displaystyle n}</script>. 
+Tuple <script type="math/tex; ">{\displaystyle W=(w_{1},w_{2},\cdots ,w_{n})}</script>, which is the tuple of the (positive) symbol weights (usually proportional to probabilities), i.e. <script type="math/tex; ">w_{i}=\mathrm {weight} \left(a_{i}\right),1\leq i\leq n</script>. </p>
+<p><strong>Output.</strong>
+Code <script type="math/tex; ">{\displaystyle C\left(W\right)=(c_{1},c_{2},\cdots ,c_{n})}</script>, which is the tuple of (binary) codewords, where <script type="math/tex; ">c_{i}</script> is the codeword for <script type="math/tex; "> a_{i},1\leq i\leq n</script>.</p>
+<p><strong>Goal.</strong>
+Let <script type="math/tex; ">{\displaystyle L\left(C\left(W\right)\right)=\sum _{i=1}^{n}{w_{i}\times \mathrm {length} \left(c_{i}\right)}}</script> be the weighted path length of code <script type="math/tex; ">C</script>. Condition: <script type="math/tex; ">{\displaystyle L\left(C\left(W\right)\right)\leq L\left(T\left(W\right)\right)}</script> for any code <script type="math/tex; ">{\displaystyle T\left(W\right)}</script>.</p>
+<h2 id="&#x5355;&#x5143;&#x6D4B;&#x8BD5;">&#x5355;&#x5143;&#x6D4B;&#x8BD5;</h2>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;python&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">def test_huffman():
+    assert huffman([
+        (&apos;a&apos;, 45), 
+        (&apos;b&apos;, 13), 
+        (&apos;c&apos;, 12), 
+        (&apos;d&apos;, 16), 
+        (&apos;e&apos;, 9), 
+        (&apos;f&apos;, 5)
+        ]) == [
+        (&apos;a&apos;, &apos;11&apos;),
+        (&apos;b&apos;, &apos;011&apos;),
+        (&apos;c&apos;, &apos;010&apos;),
+        (&apos;d&apos;, &apos;10&apos;),
+        (&apos;e&apos;, &apos;001&apos;),
+        (&apos;f&apos;, &apos;000&apos;)
+    ]<br></div></div>
+
+
+
+<h2 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;">&#x89E3;&#x9898;&#x601D;&#x8DEF;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5C06;&#x7B26;&#x53F7;&#x6309;&#x6743;&#x91CD;&#x6392;&#x5E8F;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x4F7F;&#x6743;&#x91CD;&#x5C0F;&#x7684;&#x7B26;&#x53F7;&#x5904;&#x4E8E;&#x6743;&#x91CD;&#x5927;&#x7684;&#x7B26;&#x53F7;&#x7684;&#x4E0B;&#x5C42;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x4ECE;&#x6811;&#x7684;&#x6839;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x6BCF;&#x904D;&#x5386;&#x4E00;&#x5C42;&#x5C31;&#x5728;&#x524D;&#x7F00;&#x4E00;&#x4F4D;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5047;&#x8BBE;&#x6709;&#x7B26;&#x53F7;<code>a,b,c,d,e,f</code>&#xFF0C;&#x5176;&#x6743;&#x91CD;&#x5206;&#x522B;&#x4E3A;<code>45,13,12,16,9,5</code>&#xFF0C;&#x5373;&#x7B26;&#x53F7;&#x6743;&#x91CD;&#x5BF9;&#x5217;&#x8868;<code>[(a,45),(b,13),(c,12),(d,16),(e,9),(f,5)]</code>&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6309;&#x6743;&#x91CD;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#xFF0C;&#x5F97;&#x5230;<code>[(f,5),(e,9),(c,12),(b,13),(d,16),(a,45)]</code>&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x6784;&#x9020;&#x4E8C;&#x53C9;&#x6811;&#x3002;&#x5F53;&#x4F7F;&#x7528;&#x591A;&#x5C42;&#x5D4C;&#x5957;&#x7684;&#x5217;&#x8868;&#x5B58;&#x50A8;&#x4E8C;&#x53C9;&#x6811;&#x65F6;&#xFF0C;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6784;&#x5EFA;&#x5C31;&#x7B49;&#x4E8E;&#x9012;&#x5F52;&#x5408;&#x4F75;&#x5217;&#x8868;&#x4E2D;&#x76F8;&#x90BB;&#x7684;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x76F4;&#x81F3;&#x4EC5;&#x5269;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5373;&#x6839;&#x3002;</p>
+<p><img src="../assets/images/uml/57665b5a66a11b576ad76d12b0c77270eeb16e31.png"></p>
+<p>&#x5148;&#x5C06;f&#x548C;e&#x3001;c&#x548C;b&#x3001;d&#x548C;a&#x5206;&#x522B;&#x5408;&#x4F75;&#x6210;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5F97;&#x5230;&#x4E86;&#x4E09;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#xFF1B;</p>
+<p><img src="../assets/images/uml/8e7a2e1b229694817d09cb9efad39ba50f28bfa4.png"></p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5C06;&#x5934;&#x4E24;&#x6BCE;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x5408;&#x4F75;&#xFF0C;&#x7B2C;&#x4E09;&#x68F5;&#x5219;&#x843D;&#x5355;&#x3002;&#x7ED3;&#x679C;&#x5F97;&#x5230;&#x4E24;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#xFF1B;</p>
+<p><img src="../assets/images/uml/302e2c6ee9fd60ef63517f82887cc263dfe93e31.png"></p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5C06;&#x4E24;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#x5408;&#x4F75;&#xFF0C;&#x5F97;&#x5230;&#x6700;&#x7EC8;&#x7684;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+<p><img src="../assets/images/uml/45d7558fee862e399ec287adc2e258bc171fbdb2.png"></p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x540E;&#x5E8F;&#x904D;&#x5386;&#x4E8C;&#x53C9;&#x6811;&#x3002;&#x6BCF;&#x5411;&#x4E0B;&#x4E00;&#x5C42;&#x5C31;&#x52A0;&#x4E00;&#x4F4D;&#x4EE3;&#x7801;&#xFF0C;&#x5411;&#x5DE6;&#x5B50;&#x6811;&#x904D;&#x5386;&#x52A0;<code>0</code>&#xFF0C;&#x5411;&#x53F3;&#x5B50;&#x6811;&#x904D;&#x5386;&#x5219;&#x52A0;<code>1</code>&#x3002;&#x4EE5;<code>(d,16)</code>&#x4E3A;&#x4F8B;&#xFF0C;&#x4ECE;&#x6839;&#x5F00;&#x59CB;&#x5230;&#x8FBE;<code>(d,16)</code>&#x9700;&#xFF1A;</p>
+<ol>
+<li>&#x5148;&#x8BBF;&#x95EE;&#x6839;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#xFF0C;&#x6240;&#x4EE5;&#x7B2C;&#x4E00;&#x4F4D;&#x4EE3;&#x7801;&#x4E3A;<code>0</code></li>
+<li>&#x518D;&#x8BBF;&#x95EE;&#x5DE6;&#x5B50;&#x6811;&#xFF0C;&#x4EE3;&#x7801;&#x518D;&#x52A0;&#x4E00;&#x4F4D;<code>0</code>&#xFF0C;&#x4E3A;<code>00</code></li>
+<li>&#x5230;&#x8FBE;<code>(d,16)</code>&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x7EC8;&#x4EE3;&#x7801;&#x4E3A;<code>00</code>&#x3002;</li>
+</ol>
+<h2 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;python&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}"># Huffman code
+
+def huffman(fs):
+    sortedFs = sorted(fs,key=lambda f: f[1])
+    tree = constructTree(sortedFs)
+    return sorted(traversal(tree[0]),key=lambda x:x[0])
+
+def constructTree(sortedList):
+    if len(sortedList) ==1:
+        return sortedList
+    result =[]
+    for i in range(0, len(sortedList),2):
+        e = sortedList[i]
+        if i+1 &gt;= len(sortedList):
+            result.append(e)
+        else:
+            result.append([e,sortedList[i+1]])
+    return constructTree(result)
+
+
+def traversal(tree):
+    if type(tree) is tuple:
+        # leaf
+        return [(tree[0],&apos;&apos;)]
+    leftHs = []
+    rightHs = []
+    if len(tree) &gt; 0:
+        # has left child
+        leftHs = [(lambda e: (e[0],&apos;0&apos;+e[1]))(e) for e in traversal(tree[0])]
+    if len(tree) &gt; 1:
+        # has right child
+        rightHs = [(lambda e: (e[0],&apos;1&apos;+e[1]))(e) for e in traversal(tree[1])]
+    return leftHs + rightHs<br></div></div>
+
+
+
+<h2 id="&#x53C2;&#x8003;&#x6587;&#x732E;">&#x53C2;&#x8003;&#x6587;&#x732E;</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Huffman_coding" target="_blank">Huffman coding</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="p304.html" class="navigation navigation-prev " aria-label="Previous page: P304">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../btree.html" class="navigation navigation-next " aria-label="Next page: Binary Trees">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"P305","level":"1.5.5","depth":2,"next":{"title":"Binary Trees","level":"1.6","depth":1,"path":"btree.md","ref":"btree.md","articles":[{"title":"P401","level":"1.6.1","depth":2,"path":"btree/p401.md","ref":"btree/p401.md","articles":[]},{"title":"P402","level":"1.6.2","depth":2,"path":"btree/p402.md","ref":"btree/p402.md","articles":[]},{"title":"P403","level":"1.6.3","depth":2,"path":"btree/p403.md","ref":"btree/p403.md","articles":[]},{"title":"P404","level":"1.6.4","depth":2,"path":"btree/p404.md","ref":"btree/p404.md","articles":[]},{"title":"P405","level":"1.6.5","depth":2,"path":"btree/p405.md","ref":"btree/p405.md","articles":[]},{"title":"P406","level":"1.6.6","depth":2,"path":"btree/p406.md","ref":"btree/p406.md","articles":[]},{"title":"P407","level":"1.6.7","depth":2,"path":"btree/p407.md","ref":"btree/p407.md","articles":[]},{"title":"P408","level":"1.6.8","depth":2,"path":"btree/p408.md","ref":"btree/p408.md","articles":[]},{"title":"P409","level":"1.6.9","depth":2,"path":"btree/p409.md","ref":"btree/p409.md","articles":[]},{"title":"P410","level":"1.6.10","depth":2,"path":"btree/p410.md","ref":"btree/p410.md","articles":[]},{"title":"P411","level":"1.6.11","depth":2,"path":"btree/p411.md","ref":"btree/p411.md","articles":[]},{"title":"P412","level":"1.6.12","depth":2,"path":"btree/p412.md","ref":"btree/p412.md","articles":[]},{"title":"P413","level":"1.6.13","depth":2,"path":"btree/p413.md","ref":"btree/p413.md","articles":[]},{"title":"P414","level":"1.6.14","depth":2,"path":"btree/p414.md","ref":"btree/p414.md","articles":[]},{"title":"P415","level":"1.6.15","depth":2,"path":"btree/p415.md","ref":"btree/p415.md","articles":[]},{"title":"P416","level":"1.6.16","depth":2,"path":"btree/p416.md","ref":"btree/p416.md","articles":[]},{"title":"P417","level":"1.6.17","depth":2,"path":"btree/p417.md","ref":"btree/p417.md","articles":[]},{"title":"P418","level":"1.6.18","depth":2,"path":"btree/p418.md","ref":"btree/p418.md","articles":[]}]},"previous":{"title":"P304","level":"1.5.4","depth":2,"path":"logic_codes/p304.md","ref":"logic_codes/p304.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"ga":{"configuration":"auto","token":"UA-131534053-1"},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_CN","gitbook":"*"},"file":{"path":"logic_codes/p305.md","mtime":"2019-04-15T13:46:31.376Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-15T13:46:32.594Z"},"basePath":"..","book":{"language":"zh_CN"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax-update-cdn/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu-ex/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
