@@ -26,4 +26,4 @@ jobs:
 stages:
   - test
   - name: build_docs
-    if: branch = release
+    if: branch = master
