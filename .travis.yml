@@ -1,28 +1,33 @@
 language: python
-python: "3.6"
+python: "3.7"
 node_js: "7"
 before_install:
   - sudo apt-get install graphviz
 install:
   - pip install -r requirements.txt
-  - pip install hanziconv
   - npm install gitbook-cli -g
-  - cd docs
-  - npm install safe-buffer
-  - cd ..
-  - gitbook install docs
 jobs:
   include:
     - stage: test
       script: pytest
     - stage: build_docs
-      script:  cp -r docs/zh_TR/* docs/zh_CN/ && python scripts/generate-zh_CN.py -o docs/zh_CN -s docs/zh_TR && gitbook build docs
+      script:  
+        - cp -R docs docs-target
+        - cp -r docs-target/zh_TR/* docs-target/zh_CN/ 
+        - pyenv global 3.7.1
+        - pip install hanziconv
+        - python .travis/generate-zh_CN.py -o docs-target/zh_CN -s docs-target/zh_TR
+        - cd docs-target
+        - npm install safe-buffer
+        - cd ..
+        - gitbook install docs-target
+        - gitbook build docs-target
       deploy:
         provider: pages
         skip-cleanup: true
         github-token: $GITHUB_TOKEN
         keep-history: true
-        local-dir: docs/_book
+        local-dir: docs-target/_book
 stages:
   - test
   - name: build_docs
