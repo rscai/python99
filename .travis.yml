@@ -16,7 +16,7 @@ jobs:
         - cp -r docs-target/zh_TR/* docs-target/zh_CN/ 
         - pyenv global 3.7.1
         - pip install hanziconv
-        - python .travis/generate-zh_CN.py -o docs-target/zh_CN -s docs-target/zh_TR
+        - python scripts/generate-zh_CN.py -o docs-target/zh_CN -s docs-target/zh_TR
         - cd docs-target
         - npm install safe-buffer
         - cd ..
